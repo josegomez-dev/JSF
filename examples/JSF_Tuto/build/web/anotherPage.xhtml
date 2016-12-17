@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+        <style>
+            .zoom-crazy{
+                color: tomato;
+                transition: all 1s;
+            }
+            .zoom-crazy:hover{
+                font-size: 30px;
+            }
+        </style>
+    </h:head>
+    <h:body style="background: lightblue; color: white;">
+        <center>
+            <h1>RESULTADOS</h1><br /><br /><br />
+            <h:panelGrid columns="2" style="font-size: 20px;">
+                <h:outputText value="Hola " />
+                <h:outputText value="#{bean.name}" class="zoom-crazy" />
+                
+                <h:outputText value="Cedula: " />
+                <h:outputText value="#{bean.ced}" class="zoom-crazy" />
+                
+                <h:outputText value="Technologia favorita: " />
+                <h:outputText value="#{bean.tech}" class="zoom-crazy" />
+                
+                <h:outputText value="Edad: " />
+                <h:outputText value="#{bean.edad}" class="zoom-crazy" />
+                
+                <h:outputText value="Correo: " />
+                <h:outputText value="#{bean.mail}" class="zoom-crazy" />
+            </h:panelGrid>
+            <br /><br /><br /><br />
+            <div style="background: #3399f3; color: white; width: 100%; position: fixed; bottom: 0;"> 
+                @ Astrofreakazoid
+                <h:graphicImage value="#{resource['images:54472b76a9f4b9c79be5096d4c37f2d7a40671fd_original.png']}" style="width: 50px; margin-left: 25px;" />
+            </div>
+        </center>
+    </h:body>
+</html>
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>DEMO JSF</title>
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+        <h:outputScript library="js" name="script.js" />
+    </h:head>
+    <h:body class="body-jsf">
+        
+        <center>
+            <h1 class="text-primary">CenfoEncuesta</h1><br /><br /><br />
+            <p>
+                JavaServer Faces (JSF) es un framework para aplicaciones Java basadas en web que simplifica el desarrollo de interfaces de usuario en aplicaciones Java Enterprise Edition.
+            </p><br /><br />
+            <input onclick="goto('formulario')" value="BAJAR" class="btn" /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h:form class="form-horizontal form-jsf" id="formulario" >
+                <h:panelGrid columns="1">
+                   
+                    <h3>FORMULARIO</h3><br />
+                    <ez:customInput input="#{bean.name}" label="Nombre" />
+                    <ez:customInput input="#{bean.edad}" label="Edad" />
+                    
+                    <p:outputLabel for="mail" value="Correo: " />
+                    <p:inputText id="mail" 
+                                 value="#{bean.mail}" 
+                                 required="true" 
+                                 requiredMessage="ERROR mail validator" >
+                        <f:validator validatorId="emailValidator" />
+                    </p:inputText>
+                    <p:message for="mail" style="color: red;" ></p:message><hr />
+                    
+                    <p:outputLabel  value="Tecnologia Favorita" />
+                    <p:selectOneMenu id="cbxPaisPrime" value="#{bean.tech}" >
+                        <f:selectItem itemLabel ="" itemValue="NULL" />
+                        <f:selectItem itemLabel ="JAVA" itemValue="JAVA" />
+                        <f:selectItem itemLabel ="PHP" itemValue="PHP" />
+                        <f:selectItem itemLabel ="C#" itemValue="C#" />
+                    </p:selectOneMenu>
+                    <p:message for="cbxPaisPrime" ></p:message>  
+                    
+                    <br /><br /><br />
+                    <h:commandButton value="ENVIAR INFORMACION" action="anotherPage" /><br /><br />
+                </h:panelGrid>
+            </h:form>
+            <h:graphicImage value="#{resource['images:54472b76a9f4b9c79be5096d4c37f2d7a40671fd_original.png']}" /><br /><br /><br /><br />
+            <div style="background: #3399f3; color: white; width: 100%; position: fixed; bottom: 0;"> 
+                @ ASTROFREAKAZOID
+                <h:graphicImage value="#{resource['images:54472b76a9f4b9c79be5096d4c37f2d7a40671fd_original.png']}" style="width: 50px; margin-left: 25px; padding: 5px;" />
+            </div>
+        </center>
+    </h:body>
+</html>
+

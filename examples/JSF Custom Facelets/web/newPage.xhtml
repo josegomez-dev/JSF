@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="top">
+                <h2>Bienvenido a nuestro sitio</h2>
+            </ui:define>
+
+            <ui:define name="left">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li>
+                        <h:outputLink value="Estructura de Datos" >
+                            <h:outputText value="Estructura de Datos" />
+                        </h:outputLink>
+                    </li>
+                    <li>
+                        <h:outputLink value="Recursividad" >
+                            <h:outputText value="Recursividad" />
+                        </h:outputLink>
+                    </li>
+                    <li>
+                        <h:outputLink value="Pattern Design" >
+                            <h:outputText value="Pattern Design" />
+                        </h:outputLink>
+                    </li>
+                    <li>
+                        <h:outputLink value="Object-Oriented" >
+                            <h:outputText value="Orientacion a Objetos" />
+                        </h:outputLink>
+                    </li>
+                </ul>
+            </ui:define>
+
+            <ui:define name="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, aliquam sunt vero eveniet distinctio necessitatibus labore tenetur quo quaerat rem voluptatum, numquam, reprehenderit asperiores cumque officia inventore sint quisquam provident.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ullam possimus excepturi quam vel ipsa est architecto, ipsam quos distinctio blanditiis nihil, soluta, omnis repellat itaque! Suscipit, dolore nostrum itaque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloremque dolorem, voluptatum perferendis eligendi dolore tempore, inventore ea deserunt. Recusandae, vitae in blanditiis inventore deserunt esse illum quis assumenda incidunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita molestias explicabo placeat dolorum, similique mollitia? Cum atque iusto minima harum incidunt libero nemo labore unde, voluptate perferendis distinctio excepturi. Non! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aperiam ipsam fugit itaque illum suscipit vitae esse dicta sed, inventore nam dignissimos commodi consequatur, asperiores quasi aut, maxime expedita vel.
+                </p>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

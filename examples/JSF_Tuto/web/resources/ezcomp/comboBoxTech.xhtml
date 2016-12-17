@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="bean" required="true" />
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <h:panelGrid columns="1" >           
+            <p:outputLabel for="tech" value="Tec Fav: " />
+            <p:selectOneMenu id="tech" value="#{cc.attrs.bean}">
+                <f:selectItem itemLabel="" itemValue="" />
+                <f:selectItem itemLabel="JavaServer Pages (JSP)" itemValue="JSP" />
+                <f:selectItem itemLabel="JavaServer Faces (JSF)" itemValue="JSF" />
+                <f:selectItem itemLabel="Java Standart" itemValue="JavaS" />
+            </p:selectOneMenu>
+            <p:message for="tech" ></p:message>
+        </h:panelGrid>
+    </cc:implementation>
+</html>
