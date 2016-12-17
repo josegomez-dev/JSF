@@ -1,0 +1,6 @@
+                <p:calendar label="DIA" /><br /><br /><br />
+                <p:dataTable>
+                    <p:column headerText="ID"  />
+                    <p:column headerText="NOMBRE" />
+                    <p:column headerText="APELLIDO" />
+                </p:dataTable>

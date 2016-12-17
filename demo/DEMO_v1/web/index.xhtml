@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: royalblue;
+            }
+            .btnEnviar{
+                width: 100%;
+                position: fixed;
+                bottom: 10px;
+                left: 0;
+            }
+        </style>
+    </h:head>
+    <h:body class="blue lighten-3">
+        <center>
+            
+            <h:form id="form" >
+                <h1>Formulario</h1><br /><br />
+                <h:panelGrid columns="1" >
+                    <ez:custom_input input="#{bean.name}" label="Nombre: " />
+                    <ez:custom_input input="#{bean.edad}" label="Edad: " />
+                    
+                    <p:outputLabel for="mail" value="Email: "/>
+                    <p:inputText id="mail" value="#{bean.mail}"
+                                 required="true"
+                                 requiredMessage="Correo invalido" >
+                        <f:validator validatorId="mailValidator" />
+                    </p:inputText>
+                    <p:message for="mail" />
+                    
+                    <p:outputLabel for="age" value="Edad: "/>
+                    <p:selectOneMenu value="#{bean.hobbie}" id="age" >
+                        <f:selectItem itemLabel="" itemValue="" />
+                        <f:selectItem itemLabel="Java" itemValue="Java" />
+                        <f:selectItem itemLabel="Php" itemValue="Php" />
+                        <f:selectItem itemLabel="XAML" itemValue="XAML" />
+                    </p:selectOneMenu>
+                    <p:message for="age" />
+ 
+                    <p:outputLabel for="fecha" value="Fecha: "/>
+                    <p:calendar label="DIA" id="fecha" />
+
+                    
+                    <br /><br /><br />
+                    
+                    <h:commandButton class="btn btnEnviar" action="results" value="ENVIAR" />
+                </h:panelGrid>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+

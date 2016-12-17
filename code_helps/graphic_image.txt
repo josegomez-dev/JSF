@@ -1,0 +1,1 @@
+<h:graphicImage value="#{resource['images:54472b76a9f4b9c79be5096d4c37f2d7a40671fd_original.png']}"

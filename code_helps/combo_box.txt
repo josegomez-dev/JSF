@@ -1,0 +1,8 @@
+<p:outputLabel  value="Tecnologia Favorita" />
+   <p:selectOneMenu id="cbxPaisPrime" value="#{bean.tech}" >
+       <f:selectItem itemLabel ="" itemValue="NULL" />
+       <f:selectItem itemLabel ="JAVA" itemValue="JAVA" />
+       <f:selectItem itemLabel ="PHP" itemValue="PHP" />
+       <f:selectItem itemLabel ="C#" itemValue="C#" />
+   </p:selectOneMenu>
+<p:message for="cbxPaisPrime" ></p:message> 
